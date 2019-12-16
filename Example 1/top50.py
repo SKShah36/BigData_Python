@@ -19,7 +19,7 @@ def count_tokens(filename='Shakespeare.txt'):
 def top_50_tokens(filename='Shakespeare.txt'):
     global dic
     dic_items = [di for di in dic.items()]
-    dic_items.sort(key=lambda x:x[1])
+    dic_items.sort(key=lambda x: x[1], reverse=True)
     top_50_tokens_list = [x[0] for x in dic_items]
     top_50_tokens_list = top_50_tokens_list[:50]
 
@@ -28,5 +28,4 @@ def top_50_tokens(filename='Shakespeare.txt'):
     return top_50_tokens_list
 
 
-# dic = count_tokens(filename='Shakespeare.txt')
-# top_50_tokens()
+dic = count_tokens(filename='Shakespeare.txt')
